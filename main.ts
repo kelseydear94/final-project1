@@ -14,12 +14,19 @@ input.onButtonPressed(Button.A, function () {
     y = 0
 })
 input.onButtonPressed(Button.AB, function () {
+    move = 2
     snake.move(0)
     snake_2.move(0)
     snake.change(LedSpriteProperty.Y, 1)
     snake_2.change(LedSpriteProperty.Y, 1)
     x = 0
     y = -1
+    while (move == 2) {
+        basic.pause(diff)
+        snake_2.change(LedSpriteProperty.Y, 1)
+        snake.change(LedSpriteProperty.Y, 1)
+        basic.pause(diff)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     move = 1
@@ -37,12 +44,19 @@ input.onButtonPressed(Button.B, function () {
     y = 0
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    move = 3
     snake.move(0)
     snake_2.move(0)
     snake.change(LedSpriteProperty.Y, -1)
     snake_2.change(LedSpriteProperty.Y, -1)
     x = 0
     y = 1
+    while (move == 3) {
+        basic.pause(diff)
+        snake_2.change(LedSpriteProperty.Y, -1)
+        snake.change(LedSpriteProperty.Y, -1)
+        basic.pause(diff)
+    }
 })
 let sbhvdakjlf = 0
 let move = 0
